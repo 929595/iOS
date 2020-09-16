@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A1919614633BCE7B10347A8 /* Pods_O_sikdang.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDED5464636362DF3BA5515B /* Pods_O_sikdang.framework */; };
 		38F824052509C8AB00266467 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F824042509C8AB00266467 /* AppDelegate.swift */; };
 		38F824072509C8AB00266467 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F824062509C8AB00266467 /* SceneDelegate.swift */; };
 		38F824092509C8AB00266467 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F824082509C8AB00266467 /* ViewController.swift */; };
@@ -24,6 +25,9 @@
 		38F8240D2509C8B000266467 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		38F824102509C8B000266467 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		38F824122509C8B000266467 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5431ABC9E37FA2376CAB2B2C /* Pods-O-sikdang.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-O-sikdang.debug.xcconfig"; path = "Target Support Files/Pods-O-sikdang/Pods-O-sikdang.debug.xcconfig"; sourceTree = "<group>"; };
+		6C84294B0DB83FEF26DB5B90 /* Pods-O-sikdang.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-O-sikdang.release.xcconfig"; path = "Target Support Files/Pods-O-sikdang/Pods-O-sikdang.release.xcconfig"; sourceTree = "<group>"; };
+		EDED5464636362DF3BA5515B /* Pods_O_sikdang.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_O_sikdang.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A1919614633BCE7B10347A8 /* Pods_O_sikdang.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		039BADE7A7A7350428AA42F6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5431ABC9E37FA2376CAB2B2C /* Pods-O-sikdang.debug.xcconfig */,
+				6C84294B0DB83FEF26DB5B90 /* Pods-O-sikdang.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		2DBC31752486E94A581C3417 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EDED5464636362DF3BA5515B /* Pods_O_sikdang.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		38F823F82509C8AB00266467 = {
 			isa = PBXGroup;
 			children = (
 				38F824032509C8AB00266467 /* O-sikdang */,
 				38F824022509C8AB00266467 /* Products */,
+				039BADE7A7A7350428AA42F6 /* Pods */,
+				2DBC31752486E94A581C3417 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +98,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 38F824152509C8B000266467 /* Build configuration list for PBXNativeTarget "O-sikdang" */;
 			buildPhases = (
+				5837FC5DF8261B676207D55E /* [CP] Check Pods Manifest.lock */,
 				38F823FD2509C8AB00266467 /* Sources */,
 				38F823FE2509C8AB00266467 /* Frameworks */,
 				38F823FF2509C8AB00266467 /* Resources */,
+				382CCD72251212F600B3B934 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -132,6 +158,49 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		382CCD72251212F600B3B934 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${PODS_ROOT}/SwiftLint/swiftlint\n";
+		};
+		5837FC5DF8261B676207D55E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-O-sikdang-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		38F823FD2509C8AB00266467 /* Sources */ = {
@@ -282,6 +351,7 @@
 		};
 		38F824162509C8B000266467 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5431ABC9E37FA2376CAB2B2C /* Pods-O-sikdang.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +370,7 @@
 		};
 		38F824172509C8B000266467 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6C84294B0DB83FEF26DB5B90 /* Pods-O-sikdang.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
