@@ -5,6 +5,6 @@ included:
 excluded:
  - Pods
  - O-sikdang/AppDelegate.swift
- - O-sikdang/SeeneDelegate.swift
+ - O-sikdang/SceneDelegate.swift
 
 force_cast: warning
