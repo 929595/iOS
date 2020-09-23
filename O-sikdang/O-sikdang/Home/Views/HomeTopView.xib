@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -14,24 +13,6 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="144"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sey-Ff-nOc">
-                    <rect key="frame" x="171" y="60" width="56" height="20"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="20" id="ReG-xl-CM9"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                    <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <state key="normal" title="현재 위치"/>
-                </button>
-                <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KLW-TS-qCw">
-                    <rect key="frame" x="231" y="60" width="20" height="20"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="20" id="fIn-zM-dyM"/>
-                        <constraint firstAttribute="width" secondItem="KLW-TS-qCw" secondAttribute="height" multiplier="1:1" id="iCq-aK-k5Y"/>
-                    </constraints>
-                    <color key="tintColor" name="key.yellow"/>
-                    <state key="normal" image="chevron.down" catalog="system"/>
-                </button>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GEZ-4m-rp7">
                     <rect key="frame" x="0.0" y="92" width="414" height="52"/>
                     <color key="backgroundColor" name="key.yellow"/>
@@ -39,24 +20,37 @@
                         <constraint firstAttribute="height" constant="52" id="944-Rg-xe9"/>
                     </constraints>
                 </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="현재 위치" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ewd-Zp-rWq">
+                    <rect key="frame" x="168" y="62" width="56" height="18"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.down.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="oMF-NO-phT">
+                    <rect key="frame" x="228" y="62.5" width="18" height="17"/>
+                    <color key="tintColor" name="key.yellow"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="18" id="8zj-nt-u6X"/>
+                        <constraint firstAttribute="width" secondItem="oMF-NO-phT" secondAttribute="height" multiplier="1:1" id="xiD-V7-inv"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
-                <constraint firstItem="KLW-TS-qCw" firstAttribute="leading" secondItem="sey-Ff-nOc" secondAttribute="trailing" constant="4" id="7Df-OZ-08s"/>
-                <constraint firstItem="GEZ-4m-rp7" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="Hry-7R-99r"/>
-                <constraint firstItem="GEZ-4m-rp7" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="QLE-aM-XwW"/>
-                <constraint firstItem="GEZ-4m-rp7" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="ep6-BQ-Eaa"/>
-                <constraint firstItem="sey-Ff-nOc" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" constant="-8" id="pi2-SU-SpY"/>
-                <constraint firstItem="KLW-TS-qCw" firstAttribute="centerY" secondItem="sey-Ff-nOc" secondAttribute="centerY" id="uac-QI-chU"/>
-                <constraint firstItem="GEZ-4m-rp7" firstAttribute="top" secondItem="sey-Ff-nOc" secondAttribute="bottom" constant="12" id="xGW-23-XJa"/>
+                <constraint firstItem="GEZ-4m-rp7" firstAttribute="bottom" secondItem="iN0-l3-epB" secondAttribute="bottom" id="Hry-7R-99r"/>
+                <constraint firstItem="oMF-NO-phT" firstAttribute="centerY" secondItem="Ewd-Zp-rWq" secondAttribute="centerY" id="MYn-WK-cuM"/>
+                <constraint firstItem="oMF-NO-phT" firstAttribute="leading" secondItem="Ewd-Zp-rWq" secondAttribute="trailing" constant="4" id="Mq8-ZN-9v5"/>
+                <constraint firstItem="GEZ-4m-rp7" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailing" id="QLE-aM-XwW"/>
+                <constraint firstItem="GEZ-4m-rp7" firstAttribute="top" secondItem="Ewd-Zp-rWq" secondAttribute="bottom" constant="12" id="V3w-sz-FlQ"/>
+                <constraint firstItem="GEZ-4m-rp7" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ep6-BQ-Eaa"/>
+                <constraint firstItem="Ewd-Zp-rWq" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" constant="-11" id="wvJ-LG-luR"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="366.66666666666669" y="-21.428571428571427"/>
         </view>
     </objects>
     <resources>
-        <image name="chevron.down" catalog="system" width="128" height="72"/>
+        <image name="chevron.down.circle.fill" catalog="system" width="128" height="121"/>
         <namedColor name="key.yellow">
             <color red="0.98000001907348633" green="0.75300002098083496" blue="0.44699999690055847" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
