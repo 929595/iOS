@@ -1,10 +1,10 @@
 disabled_rules:
-
+ - trailing_whitespace
 included:
-
+ 
 excluded:
-- Pods
-- O-sikdang/AppDelegate.swift
-- O-sikdang/SeeneDelegate.swift
+ - Pods
+ - O-sikdang/AppDelegate.swift
+ - O-sikdang/SeeneDelegate.swift
 
 force_cast: warning
