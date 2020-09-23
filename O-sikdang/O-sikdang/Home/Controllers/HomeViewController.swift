@@ -14,6 +14,8 @@ final class HomeViewController: UIViewController {
     }
 }
 
+// MARK: - HomeTopViewDelegate
+
 extension HomeViewController: HomeTopViewDelegate {
     func didTapLocation() {
         #warning("Did Tap Location")
