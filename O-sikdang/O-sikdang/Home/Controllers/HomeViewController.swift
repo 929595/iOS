@@ -12,6 +12,17 @@ final class HomeViewController: UIViewController {
         super.viewDidLoad()
         configure()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        homeTopView.configureTapRecognizer()
+    }
+}
+
+extension HomeViewController: HomeTopViewDelegate {
+    func didTapLocation() {
+        #warning("Did Tap Location")
+    }
 }
 
 // MARK: - Configuration
@@ -21,6 +32,11 @@ extension HomeViewController {
         configureViews()
         configureSubviews()
         configureViewLayouts()
+        configureDelegates()
+    }
+    
+    private func configureDelegates() {
+        homeTopView.delegate = self
     }
     
     private func configureViewLayouts() {

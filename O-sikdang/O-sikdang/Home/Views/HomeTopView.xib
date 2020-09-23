@@ -20,13 +20,13 @@
                         <constraint firstAttribute="height" constant="52" id="944-Rg-xe9"/>
                     </constraints>
                 </view>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="현재 위치" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ewd-Zp-rWq">
+                <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="현재 위치" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ewd-Zp-rWq">
                     <rect key="frame" x="168" y="62" width="56" height="18"/>
                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.down.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="oMF-NO-phT">
+                <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.down.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="oMF-NO-phT">
                     <rect key="frame" x="228" y="62.5" width="18" height="17"/>
                     <color key="tintColor" name="key.yellow"/>
                     <constraints>
@@ -46,6 +46,10 @@
                 <constraint firstItem="Ewd-Zp-rWq" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" constant="-11" id="wvJ-LG-luR"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="currentLocationButtonImage" destination="oMF-NO-phT" id="Hg6-Ra-kU8"/>
+                <outlet property="currentLocationLabel" destination="Ewd-Zp-rWq" id="sMC-wR-uny"/>
+            </connections>
             <point key="canvasLocation" x="366.66666666666669" y="-21.428571428571427"/>
         </view>
     </objects>
