@@ -5,6 +5,8 @@ final class HomeViewController: UIViewController {
 
     private var homeTopView: HomeTopView!
     private var todayChatBubbleView: HomeTodayChatBubbleView!
+    @IBOutlet weak var restaurantsTableView: UITableView!
+    @IBOutlet weak var refreshButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +35,17 @@ extension HomeViewController {
             make.trailing.equalTo(view.snp.trailing)
             make.top.equalTo(homeTopView.snp.bottom)
             make.height.equalTo(120)
+        }
+        restaurantsTableView.snp.makeConstraints { (make) -> Void in
+            restaurantsTableView.backgroundColor = .blue
+            make.leading.equalTo(view.snp.leading)
+            make.trailing.equalTo(view.snp.trailing)
+            make.top.equalTo(todayChatBubbleView.snp.bottom)
+            make.height.equalTo(360)
+        }
+        refreshButton.snp.updateConstraints { (make) -> Void in
+            make.top.equalTo(restaurantsTableView.snp.bottom).offset(12)
+            make.centerX.equalTo(restaurantsTableView.snp.centerX)
         }
     }
     
