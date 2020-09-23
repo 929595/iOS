@@ -1,0 +1,10 @@
+disabled_rules:
+
+included:
+
+excluded:
+- Pods
+- O-sikdang/AppDelegate.swift
+- O-sikdang/SeeneDelegate.swift
+
+force_cast: warning

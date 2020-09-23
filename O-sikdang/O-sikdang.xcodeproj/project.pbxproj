@@ -3,12 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		1A1919614633BCE7B10347A8 /* Pods_O_sikdang.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDED5464636362DF3BA5515B /* Pods_O_sikdang.framework */; };
 		382D473B2519FC380055A469 /* HomeTopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 382D473A2519FC380055A469 /* HomeTopView.xib */; };
+		382D4743251B3E3E0055A469 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 382D4742251B3E3E0055A469 /* .swiftlint.yml */; };
 		38F824052509C8AB00266467 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F824042509C8AB00266467 /* AppDelegate.swift */; };
 		38F824072509C8AB00266467 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F824062509C8AB00266467 /* SceneDelegate.swift */; };
 		38F824092509C8AB00266467 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F824082509C8AB00266467 /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		382D473A2519FC380055A469 /* HomeTopView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTopView.xib; sourceTree = "<group>"; };
+		382D4742251B3E3E0055A469 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		38F824012509C8AB00266467 /* O-sikdang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "O-sikdang.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		38F824042509C8AB00266467 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		38F824062509C8AB00266467 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 		382D473C2519FD4A0055A469 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				382D473F251B3D3E0055A469 /* VIews */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -107,9 +110,17 @@
 			path = "View+XIB";
 			sourceTree = "<group>";
 		};
+		382D473F251B3D3E0055A469 /* VIews */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = VIews;
+			sourceTree = "<group>";
+		};
 		38F823F82509C8AB00266467 = {
 			isa = PBXGroup;
 			children = (
+				382D4742251B3E3E0055A469 /* .swiftlint.yml */,
 				38F824032509C8AB00266467 /* O-sikdang */,
 				38F824022509C8AB00266467 /* Products */,
 				039BADE7A7A7350428AA42F6 /* Pods */,
@@ -203,6 +214,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				382D4743251B3E3E0055A469 /* .swiftlint.yml in Resources */,
 				38F824112509C8B000266467 /* LaunchScreen.storyboard in Resources */,
 				38F8240E2509C8B000266467 /* Assets.xcassets in Resources */,
 				38F8240C2509C8AB00266467 /* Main.storyboard in Resources */,
