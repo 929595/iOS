@@ -20,35 +20,38 @@
                         <constraint firstAttribute="height" constant="52" id="944-Rg-xe9"/>
                     </constraints>
                 </view>
-                <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="현재 위치" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ewd-Zp-rWq">
-                    <rect key="frame" x="168" y="62" width="56" height="18"/>
-                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.down.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="oMF-NO-phT">
-                    <rect key="frame" x="228" y="62.5" width="18" height="17"/>
-                    <color key="tintColor" name="key.yellow"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="18" id="8zj-nt-u6X"/>
-                        <constraint firstAttribute="width" secondItem="oMF-NO-phT" secondAttribute="height" multiplier="1:1" id="xiD-V7-inv"/>
-                    </constraints>
-                </imageView>
+                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="5FS-Ic-8G2">
+                    <rect key="frame" x="168" y="62" width="78" height="18"/>
+                    <subviews>
+                        <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="현재 위치" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ewd-Zp-rWq">
+                            <rect key="frame" x="0.0" y="0.0" width="56" height="18"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.down.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="oMF-NO-phT">
+                            <rect key="frame" x="60" y="0.5" width="18" height="17"/>
+                            <color key="tintColor" name="key.yellow"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="18" id="8zj-nt-u6X"/>
+                                <constraint firstAttribute="width" secondItem="oMF-NO-phT" secondAttribute="height" multiplier="1:1" id="xiD-V7-inv"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                </stackView>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
                 <constraint firstItem="GEZ-4m-rp7" firstAttribute="bottom" secondItem="iN0-l3-epB" secondAttribute="bottom" id="Hry-7R-99r"/>
-                <constraint firstItem="oMF-NO-phT" firstAttribute="centerY" secondItem="Ewd-Zp-rWq" secondAttribute="centerY" id="MYn-WK-cuM"/>
-                <constraint firstItem="oMF-NO-phT" firstAttribute="leading" secondItem="Ewd-Zp-rWq" secondAttribute="trailing" constant="4" id="Mq8-ZN-9v5"/>
                 <constraint firstItem="GEZ-4m-rp7" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailing" id="QLE-aM-XwW"/>
-                <constraint firstItem="GEZ-4m-rp7" firstAttribute="top" secondItem="Ewd-Zp-rWq" secondAttribute="bottom" constant="12" id="V3w-sz-FlQ"/>
                 <constraint firstItem="GEZ-4m-rp7" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ep6-BQ-Eaa"/>
-                <constraint firstItem="Ewd-Zp-rWq" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" constant="-11" id="wvJ-LG-luR"/>
+                <constraint firstItem="5FS-Ic-8G2" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="fL0-Tb-Zds"/>
+                <constraint firstItem="GEZ-4m-rp7" firstAttribute="top" secondItem="5FS-Ic-8G2" secondAttribute="bottom" constant="12" id="sUP-Kp-a9s"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
-                <outlet property="currentLocationButtonImage" destination="oMF-NO-phT" id="Hg6-Ra-kU8"/>
                 <outlet property="currentLocationLabel" destination="Ewd-Zp-rWq" id="sMC-wR-uny"/>
+                <outlet property="currentLocationStackView" destination="5FS-Ic-8G2" id="OFJ-gU-SKf"/>
             </connections>
             <point key="canvasLocation" x="366.66666666666669" y="-21.428571428571427"/>
         </view>

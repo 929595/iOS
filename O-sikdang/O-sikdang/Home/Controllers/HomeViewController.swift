@@ -12,11 +12,6 @@ final class HomeViewController: UIViewController {
         super.viewDidLoad()
         configure()
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        homeTopView.configureTapRecognizer()
-    }
 }
 
 extension HomeViewController: HomeTopViewDelegate {
