@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1A1919614633BCE7B10347A8 /* Pods_O_sikdang.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDED5464636362DF3BA5515B /* Pods_O_sikdang.framework */; };
+		382D473B2519FC380055A469 /* HomeTopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 382D473A2519FC380055A469 /* HomeTopView.xib */; };
 		38F824052509C8AB00266467 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F824042509C8AB00266467 /* AppDelegate.swift */; };
 		38F824072509C8AB00266467 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F824062509C8AB00266467 /* SceneDelegate.swift */; };
 		38F824092509C8AB00266467 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F824082509C8AB00266467 /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		382D473A2519FC380055A469 /* HomeTopView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTopView.xib; sourceTree = "<group>"; };
 		38F824012509C8AB00266467 /* O-sikdang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "O-sikdang.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		38F824042509C8AB00266467 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		38F824062509C8AB00266467 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,52 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		382D47372519FA510055A469 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				382D47392519FA5E0055A469 /* Views */,
+				382D47382519FA560055A469 /* Controllers */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		382D47382519FA560055A469 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		382D47392519FA5E0055A469 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				382D473A2519FC380055A469 /* HomeTopView.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		382D473C2519FD4A0055A469 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		382D473D2519FD590055A469 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				382D473E2519FD7F0055A469 /* View+XIB */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		382D473E2519FD7F0055A469 /* View+XIB */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View+XIB";
+			sourceTree = "<group>";
+		};
 		38F823F82509C8AB00266467 = {
 			isa = PBXGroup;
 			children = (
@@ -80,6 +128,9 @@
 		38F824032509C8AB00266467 /* O-sikdang */ = {
 			isa = PBXGroup;
 			children = (
+				382D473D2519FD590055A469 /* Utilities */,
+				382D473C2519FD4A0055A469 /* Extensions */,
+				382D47372519FA510055A469 /* Home */,
 				38F824042509C8AB00266467 /* AppDelegate.swift */,
 				38F824062509C8AB00266467 /* SceneDelegate.swift */,
 				38F824082509C8AB00266467 /* ViewController.swift */,
@@ -154,6 +205,7 @@
 				38F824112509C8B000266467 /* LaunchScreen.storyboard in Resources */,
 				38F8240E2509C8B000266467 /* Assets.xcassets in Resources */,
 				38F8240C2509C8AB00266467 /* Main.storyboard in Resources */,
+				382D473B2519FC380055A469 /* HomeTopView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
