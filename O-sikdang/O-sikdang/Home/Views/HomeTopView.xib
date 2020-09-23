@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="HomeTopView" customModule="O_sikdang" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="144"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sey-Ff-nOc">
+                    <rect key="frame" x="171" y="60" width="56" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="ReG-xl-CM9"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <state key="normal" title="현재 위치"/>
+                </button>
+                <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KLW-TS-qCw">
+                    <rect key="frame" x="231" y="60" width="20" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="20" id="fIn-zM-dyM"/>
+                        <constraint firstAttribute="width" secondItem="KLW-TS-qCw" secondAttribute="height" multiplier="1:1" id="iCq-aK-k5Y"/>
+                    </constraints>
+                    <color key="tintColor" name="key.yellow"/>
+                    <state key="normal" image="chevron.down" catalog="system"/>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GEZ-4m-rp7">
+                    <rect key="frame" x="0.0" y="92" width="414" height="52"/>
+                    <color key="backgroundColor" name="key.yellow"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="52" id="944-Rg-xe9"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="KLW-TS-qCw" firstAttribute="leading" secondItem="sey-Ff-nOc" secondAttribute="trailing" constant="4" id="7Df-OZ-08s"/>
+                <constraint firstItem="GEZ-4m-rp7" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="Hry-7R-99r"/>
+                <constraint firstItem="GEZ-4m-rp7" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="QLE-aM-XwW"/>
+                <constraint firstItem="GEZ-4m-rp7" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="ep6-BQ-Eaa"/>
+                <constraint firstItem="sey-Ff-nOc" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" constant="-8" id="pi2-SU-SpY"/>
+                <constraint firstItem="KLW-TS-qCw" firstAttribute="centerY" secondItem="sey-Ff-nOc" secondAttribute="centerY" id="uac-QI-chU"/>
+                <constraint firstItem="GEZ-4m-rp7" firstAttribute="top" secondItem="sey-Ff-nOc" secondAttribute="bottom" constant="12" id="xGW-23-XJa"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="366.66666666666669" y="-21.428571428571427"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="chevron.down" catalog="system" width="128" height="72"/>
+        <namedColor name="key.yellow">
+            <color red="0.98000001907348633" green="0.75300002098083496" blue="0.44699999690055847" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

@@ -3,24 +3,36 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		1A1919614633BCE7B10347A8 /* Pods_O_sikdang.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDED5464636362DF3BA5515B /* Pods_O_sikdang.framework */; };
+		382D473B2519FC380055A469 /* HomeTopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 382D473A2519FC380055A469 /* HomeTopView.xib */; };
+		382D4743251B3E3E0055A469 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 382D4742251B3E3E0055A469 /* .swiftlint.yml */; };
+		382D4745251B3FBC0055A469 /* UIView+Nib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382D4744251B3FBC0055A469 /* UIView+Nib.swift */; };
+		382D4747251B3FF40055A469 /* HomeTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382D4746251B3FF40055A469 /* HomeTopView.swift */; };
+		382D4749251B49430055A469 /* HomeTodayChatBubbleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 382D4748251B49430055A469 /* HomeTodayChatBubbleView.xib */; };
+		382D474B251B49850055A469 /* HomeTodayChatBubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382D474A251B49850055A469 /* HomeTodayChatBubbleView.swift */; };
 		38F824052509C8AB00266467 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F824042509C8AB00266467 /* AppDelegate.swift */; };
 		38F824072509C8AB00266467 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F824062509C8AB00266467 /* SceneDelegate.swift */; };
-		38F824092509C8AB00266467 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F824082509C8AB00266467 /* ViewController.swift */; };
+		38F824092509C8AB00266467 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F824082509C8AB00266467 /* HomeViewController.swift */; };
 		38F8240C2509C8AB00266467 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38F8240A2509C8AB00266467 /* Main.storyboard */; };
 		38F8240E2509C8B000266467 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38F8240D2509C8B000266467 /* Assets.xcassets */; };
 		38F824112509C8B000266467 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38F8240F2509C8B000266467 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		382D473A2519FC380055A469 /* HomeTopView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTopView.xib; sourceTree = "<group>"; };
+		382D4742251B3E3E0055A469 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		382D4744251B3FBC0055A469 /* UIView+Nib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Nib.swift"; sourceTree = "<group>"; };
+		382D4746251B3FF40055A469 /* HomeTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTopView.swift; sourceTree = "<group>"; };
+		382D4748251B49430055A469 /* HomeTodayChatBubbleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTodayChatBubbleView.xib; sourceTree = "<group>"; };
+		382D474A251B49850055A469 /* HomeTodayChatBubbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTodayChatBubbleView.swift; sourceTree = "<group>"; };
 		38F824012509C8AB00266467 /* O-sikdang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "O-sikdang.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		38F824042509C8AB00266467 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		38F824062509C8AB00266467 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		38F824082509C8AB00266467 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		38F824082509C8AB00266467 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		38F8240B2509C8AB00266467 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		38F8240D2509C8B000266467 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		38F824102509C8B000266467 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -59,9 +71,69 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		382D47372519FA510055A469 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				382D47382519FA560055A469 /* Controllers */,
+				382D47392519FA5E0055A469 /* Views */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		382D47382519FA560055A469 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				38F824082509C8AB00266467 /* HomeViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		382D47392519FA5E0055A469 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				382D473A2519FC380055A469 /* HomeTopView.xib */,
+				382D4746251B3FF40055A469 /* HomeTopView.swift */,
+				382D4748251B49430055A469 /* HomeTodayChatBubbleView.xib */,
+				382D474A251B49850055A469 /* HomeTodayChatBubbleView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		382D473C2519FD4A0055A469 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				382D473F251B3D3E0055A469 /* VIews */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		382D473D2519FD590055A469 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				382D473E2519FD7F0055A469 /* View+XIB */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		382D473E2519FD7F0055A469 /* View+XIB */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View+XIB";
+			sourceTree = "<group>";
+		};
+		382D473F251B3D3E0055A469 /* VIews */ = {
+			isa = PBXGroup;
+			children = (
+				382D4744251B3FBC0055A469 /* UIView+Nib.swift */,
+			);
+			path = VIews;
+			sourceTree = "<group>";
+		};
 		38F823F82509C8AB00266467 = {
 			isa = PBXGroup;
 			children = (
+				382D4742251B3E3E0055A469 /* .swiftlint.yml */,
 				38F824032509C8AB00266467 /* O-sikdang */,
 				38F824022509C8AB00266467 /* Products */,
 				039BADE7A7A7350428AA42F6 /* Pods */,
@@ -80,9 +152,11 @@
 		38F824032509C8AB00266467 /* O-sikdang */ = {
 			isa = PBXGroup;
 			children = (
+				382D473D2519FD590055A469 /* Utilities */,
+				382D473C2519FD4A0055A469 /* Extensions */,
+				382D47372519FA510055A469 /* Home */,
 				38F824042509C8AB00266467 /* AppDelegate.swift */,
 				38F824062509C8AB00266467 /* SceneDelegate.swift */,
-				38F824082509C8AB00266467 /* ViewController.swift */,
 				38F8240A2509C8AB00266467 /* Main.storyboard */,
 				38F8240D2509C8B000266467 /* Assets.xcassets */,
 				38F8240F2509C8B000266467 /* LaunchScreen.storyboard */,
@@ -103,6 +177,7 @@
 				38F823FE2509C8AB00266467 /* Frameworks */,
 				38F823FF2509C8AB00266467 /* Resources */,
 				382CCD72251212F600B3B934 /* SwiftLint */,
+				EAD9E20CBD7597FAC2AA3DD3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -151,9 +226,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				382D4743251B3E3E0055A469 /* .swiftlint.yml in Resources */,
+				382D4749251B49430055A469 /* HomeTodayChatBubbleView.xib in Resources */,
 				38F824112509C8B000266467 /* LaunchScreen.storyboard in Resources */,
 				38F8240E2509C8B000266467 /* Assets.xcassets in Resources */,
 				38F8240C2509C8AB00266467 /* Main.storyboard in Resources */,
+				382D473B2519FC380055A469 /* HomeTopView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,6 +278,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		EAD9E20CBD7597FAC2AA3DD3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-O-sikdang/Pods-O-sikdang-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-O-sikdang/Pods-O-sikdang-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-O-sikdang/Pods-O-sikdang-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -207,9 +302,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38F824092509C8AB00266467 /* ViewController.swift in Sources */,
+				382D4745251B3FBC0055A469 /* UIView+Nib.swift in Sources */,
+				382D4747251B3FF40055A469 /* HomeTopView.swift in Sources */,
+				38F824092509C8AB00266467 /* HomeViewController.swift in Sources */,
 				38F824052509C8AB00266467 /* AppDelegate.swift in Sources */,
 				38F824072509C8AB00266467 /* SceneDelegate.swift in Sources */,
+				382D474B251B49850055A469 /* HomeTodayChatBubbleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,7 +383,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -339,7 +437,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
