@@ -12,6 +12,8 @@
 		382D4743251B3E3E0055A469 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 382D4742251B3E3E0055A469 /* .swiftlint.yml */; };
 		382D4745251B3FBC0055A469 /* UIView+Nib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382D4744251B3FBC0055A469 /* UIView+Nib.swift */; };
 		382D4747251B3FF40055A469 /* HomeTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382D4746251B3FF40055A469 /* HomeTopView.swift */; };
+		382D4749251B49430055A469 /* HomeTodayChatBubbleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 382D4748251B49430055A469 /* HomeTodayChatBubbleView.xib */; };
+		382D474B251B49850055A469 /* HomeTodayChatBubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382D474A251B49850055A469 /* HomeTodayChatBubbleView.swift */; };
 		38F824052509C8AB00266467 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F824042509C8AB00266467 /* AppDelegate.swift */; };
 		38F824072509C8AB00266467 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F824062509C8AB00266467 /* SceneDelegate.swift */; };
 		38F824092509C8AB00266467 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F824082509C8AB00266467 /* ViewController.swift */; };
@@ -25,6 +27,8 @@
 		382D4742251B3E3E0055A469 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		382D4744251B3FBC0055A469 /* UIView+Nib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Nib.swift"; sourceTree = "<group>"; };
 		382D4746251B3FF40055A469 /* HomeTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTopView.swift; sourceTree = "<group>"; };
+		382D4748251B49430055A469 /* HomeTodayChatBubbleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTodayChatBubbleView.xib; sourceTree = "<group>"; };
+		382D474A251B49850055A469 /* HomeTodayChatBubbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTodayChatBubbleView.swift; sourceTree = "<group>"; };
 		38F824012509C8AB00266467 /* O-sikdang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "O-sikdang.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		38F824042509C8AB00266467 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		38F824062509C8AB00266467 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +92,8 @@
 			children = (
 				382D473A2519FC380055A469 /* HomeTopView.xib */,
 				382D4746251B3FF40055A469 /* HomeTopView.swift */,
+				382D4748251B49430055A469 /* HomeTodayChatBubbleView.xib */,
+				382D474A251B49850055A469 /* HomeTodayChatBubbleView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -221,6 +227,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				382D4743251B3E3E0055A469 /* .swiftlint.yml in Resources */,
+				382D4749251B49430055A469 /* HomeTodayChatBubbleView.xib in Resources */,
 				38F824112509C8B000266467 /* LaunchScreen.storyboard in Resources */,
 				38F8240E2509C8B000266467 /* Assets.xcassets in Resources */,
 				38F8240C2509C8AB00266467 /* Main.storyboard in Resources */,
@@ -300,6 +307,7 @@
 				38F824092509C8AB00266467 /* ViewController.swift in Sources */,
 				38F824052509C8AB00266467 /* AppDelegate.swift in Sources */,
 				38F824072509C8AB00266467 /* SceneDelegate.swift in Sources */,
+				382D474B251B49850055A469 /* HomeTodayChatBubbleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
