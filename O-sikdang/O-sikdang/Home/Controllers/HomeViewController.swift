@@ -11,6 +11,12 @@ final class HomeViewController: UIViewController {
     
     let locationManager = CLLocationManager()
     
+    private enum Metric {
+        static let topViewHeight: CGFloat = 88.0
+        static let chatBubbleViewHeight: CGFloat = 120.0
+        static let refreshButtonTopMargin: CGFloat = 12.0
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configure()
@@ -61,13 +67,13 @@ extension HomeViewController {
             make.leading.equalTo(view.snp.leading)
             make.trailing.equalTo(view.snp.trailing)
             make.top.equalTo(view.safeAreaLayoutGuide.snp.top)
-            make.height.equalTo(100)
+            make.height.equalTo(Metric.topViewHeight)
         }
         todayChatBubbleView.snp.makeConstraints { (make) -> Void in
             make.leading.equalTo(view.snp.leading)
             make.trailing.equalTo(view.snp.trailing)
             make.top.equalTo(homeTopView.snp.bottom)
-            make.height.equalTo(120)
+            make.height.equalTo(Metric.chatBubbleViewHeight)
         }
         restaurantsTableView.snp.makeConstraints { (make) -> Void in
             restaurantsTableView.backgroundColor = .blue
@@ -77,7 +83,7 @@ extension HomeViewController {
             make.height.equalTo(360)
         }
         refreshButton.snp.updateConstraints { (make) -> Void in
-            make.top.equalTo(restaurantsTableView.snp.bottom).offset(12)
+            make.top.equalTo(restaurantsTableView.snp.bottom).offset(Metric.refreshButtonTopMargin)
             make.centerX.equalTo(restaurantsTableView.snp.centerX)
         }
     }
