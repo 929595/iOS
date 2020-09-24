@@ -14,15 +14,13 @@ final class FilterButton: UIView {
         configure()
     }
     
+    func configureTitle(_ title: String) {
+        titleLabel.text = title
+    }
+}
+
+extension FilterButton {
     private func configure() {
         round(cornerRadius: 18)
-    }
-    
-    func configureText() {
-        var randomTitle: String = ""
-        for _ in 0..<Int.random(in: 1...5) {
-            randomTitle += "헤"
-        }
-        titleLabel.text = randomTitle
     }
 }
