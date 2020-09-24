@@ -1,5 +1,6 @@
 import UIKit
 import SnapKit
+import CoreLocation
 
 final class HomeViewController: UIViewController {
 
@@ -8,9 +9,26 @@ final class HomeViewController: UIViewController {
     @IBOutlet weak var restaurantsTableView: UITableView!
     @IBOutlet weak var refreshButton: UIButton!
     
+    let locationManager = CLLocationManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configure()
+        locationManager.requestWhenInUseAuthorization()
+    }
+}
+
+// MARK: - Core Location
+
+extension HomeViewController: CLLocationManagerDelegate {
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let location = locations.first {
+            let coordinate = location.coordinate
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        #warning("Handling error")
     }
 }
 
@@ -18,7 +36,7 @@ final class HomeViewController: UIViewController {
 
 extension HomeViewController: HomeTopViewDelegate {
     func didTapLocation() {
-        #warning("Did Tap Location")
+        locationManager.requestLocation()
     }
 }
 
@@ -34,6 +52,7 @@ extension HomeViewController {
     
     private func configureDelegates() {
         homeTopView.delegate = self
+        locationManager.delegate = self
     }
     
     private func configureViewLayouts() {
