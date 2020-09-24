@@ -47,6 +47,10 @@ extension HomeViewController: CLLocationManagerDelegate {
 // MARK: - HomeTopViewDelegate
 
 extension HomeViewController: HomeTopViewDelegate {
+    func didTapCategoryFilterButton() {
+        print("Category selected")
+    }
+    
     func didTapLocation() {
         locationManager.requestLocation()
     }

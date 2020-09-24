@@ -87,6 +87,7 @@
             <connections>
                 <outlet property="currentLocationLabel" destination="Ewd-Zp-rWq" id="sMC-wR-uny"/>
                 <outlet property="currentLocationStackView" destination="5FS-Ic-8G2" id="OFJ-gU-SKf"/>
+                <outlet property="filterButtonsStackView" destination="jOk-Ec-40K" id="dIt-So-wv0"/>
             </connections>
             <point key="canvasLocation" x="366.66666666666669" y="-21.428571428571427"/>
         </view>
