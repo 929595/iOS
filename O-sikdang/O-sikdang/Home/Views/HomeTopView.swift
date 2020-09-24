@@ -1,4 +1,5 @@
 import UIKit
+import CoreLocation
 
 protocol HomeTopViewDelegate: class {
     func didTapLocation()
@@ -21,6 +22,10 @@ final class HomeTopView: UIView {
     
     deinit {
         currentLocationStackView.removeGestureRecognizer(currentLocationTapGestureRecognizer)
+    }
+    
+    func updateCurrentLocation(coordinate: CLLocationCoordinate2D) {
+        currentLocationLabel.text = "(\(coordinate.latitude), \(coordinate.longitude))"
     }
     
     @objc private func locationTapped() {

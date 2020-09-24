@@ -24,6 +24,7 @@ extension HomeViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let location = locations.first {
             let coordinate = location.coordinate
+            homeTopView.updateCurrentLocation(coordinate: coordinate)
         }
     }
     
