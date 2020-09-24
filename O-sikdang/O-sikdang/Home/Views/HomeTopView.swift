@@ -1,10 +1,15 @@
 import UIKit
 import CoreLocation
 
-protocol HomeTopViewDelegate: class {
+protocol currentLocationDelegate: class {
     func didTapLocation()
+}
+
+protocol filterButtonActionsDelegate: class {
     func didTapCategoryFilterButton()
 }
+
+typealias HomeTopViewDelegate = currentLocationDelegate & filterButtonActionsDelegate
 
 final class HomeTopView: UIView {
     
