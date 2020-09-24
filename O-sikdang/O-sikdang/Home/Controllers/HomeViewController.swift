@@ -35,7 +35,12 @@ extension HomeViewController: CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        #warning("Handling error")
+        let alertController = UIAlertController(title: "위치 정보 오류",
+                                                message: "위치 정보를 불러올 수 없습니다.",
+                                                preferredStyle: .alert)
+        let action = UIAlertAction(title: "확인", style: .cancel, handler: nil)
+        alertController.addAction(action)
+        present(alertController, animated: true, completion: nil)
     }
 }
 
