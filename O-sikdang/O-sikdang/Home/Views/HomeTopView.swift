@@ -7,14 +7,7 @@ protocol HomeTopViewDelegate: class {
 
 final class HomeTopView: UIView {
     
-    @IBOutlet weak var currentLocationStackView: UIStackView! {
-        didSet {
-            currentLocationTapGestureRecognizer = UITapGestureRecognizer(
-                target: self,
-                action: #selector(locationTapped))
-            currentLocationStackView.addGestureRecognizer(currentLocationTapGestureRecognizer)
-        }
-    }
+    @IBOutlet weak var currentLocationStackView: UIStackView!
     @IBOutlet weak var currentLocationLabel: UILabel!
     private var currentLocationTapGestureRecognizer: UITapGestureRecognizer!
     
@@ -22,6 +15,17 @@ final class HomeTopView: UIView {
     
     deinit {
         currentLocationStackView.removeGestureRecognizer(currentLocationTapGestureRecognizer)
+    }
+    
+    override func awakeFromNib() {
+        configureTapGestureRecognizer()
+    }
+    
+    private func configureTapGestureRecognizer() {
+        currentLocationTapGestureRecognizer = UITapGestureRecognizer(
+            target: self,
+            action: #selector(locationTapped))
+        currentLocationStackView.addGestureRecognizer(currentLocationTapGestureRecognizer)
     }
     
     func updateCurrentLocation(coordinate: CLLocationCoordinate2D) {
