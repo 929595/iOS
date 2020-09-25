@@ -37,6 +37,7 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="imageView" destination="Kp7-kU-ryK" id="9mg-aK-JO9"/>
                 <outlet property="titleLabel" destination="fLf-bE-wgF" id="giN-wi-OTN"/>
             </connections>
             <point key="canvasLocation" x="-118.11594202898551" y="374.66517857142856"/>
