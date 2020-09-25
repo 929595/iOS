@@ -18,8 +18,7 @@ final class HomeTopView: UIView {
     @IBOutlet weak var currentLocationLabel: UILabel!
     @IBOutlet weak var filterButtonsStackView: UIStackView!
     
-    private var categoryFilterButton: FilterButton!
-    private var distanceFilterButton: FilterButton!
+    private var filterButtons: [FilterButton] = []
     
     private var currentLocationTapGestureRecognizer: UITapGestureRecognizer!
     
@@ -44,26 +43,20 @@ final class HomeTopView: UIView {
 
 extension HomeTopView {
     private func configureFilterButtons() {
-        configureCategoryFilterButton()
-        configureDistanceFilterButton()
-    }
-    
-    private func configureCategoryFilterButton() {
-        categoryFilterButton = FilterButton.loadFromNib()
-        filterButtonsStackView.addArrangedSubview(categoryFilterButton)
-        categoryFilterButton.configureTitle("카테고리")
-        categoryFilterButton.addAction { [weak self] in
+        configureFilterButton(title: "카테고리") { [weak self] in
             self?.delegate?.didTapCategoryFilterButton()
         }
-    }
-    
-    private func configureDistanceFilterButton() {
-        distanceFilterButton = FilterButton.loadFromNib()
-        filterButtonsStackView.addArrangedSubview(distanceFilterButton)
-        distanceFilterButton.configureTitle("거리")
-        distanceFilterButton.addAction { [weak self] in
+        configureFilterButton(title: "거리") { [weak self] in
             self?.delegate?.didTapDistanceFilterButton()
         }
+    }
+    
+    private func configureFilterButton(title: String, delegateAction: @escaping (() -> Void)) {
+        let filterButton = FilterButton.loadFromNib()
+        filterButtons.append(filterButton)
+        filterButton.configureTitle(title)
+        filterButtonsStackView.addArrangedSubview(filterButton)
+        filterButton.addAction(delegateAction)
     }
     
     private func configureTapGestureRecognizer() {
