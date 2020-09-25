@@ -6,8 +6,8 @@ protocol currentLocationDelegate: class {
 }
 
 protocol filterButtonActionsDelegate: class {
-    func didTapCategoryFilterButton()
-    func didTapDistanceFilterButton()
+    func didTapCategoryFilterButton(_ state: FilterButton.State)
+    func didTapDistanceFilterButton(_ state: FilterButton.State)
 }
 
 typealias HomeTopViewDelegate = currentLocationDelegate & filterButtonActionsDelegate
@@ -43,20 +43,28 @@ final class HomeTopView: UIView {
 
 extension HomeTopView {
     private func configureFilterButtons() {
-        configureFilterButton(title: "카테고리") { [weak self] in
-            self?.delegate?.didTapCategoryFilterButton()
+        configureFilterButton(title: "카테고리") { [weak self] (state, filterButton) in
+            self?.filterButtons
+                .filter { $0 != filterButton }
+                .forEach { $0.reset() }
+            self?.delegate?.didTapCategoryFilterButton(state)
         }
-        configureFilterButton(title: "거리") { [weak self] in
-            self?.delegate?.didTapDistanceFilterButton()
+        configureFilterButton(title: "거리") { [weak self] (state, filterButton) in
+            self?.filterButtons
+                .filter { $0 != filterButton }
+                .forEach { $0.reset() }
+            self?.delegate?.didTapDistanceFilterButton(state)
         }
     }
     
-    private func configureFilterButton(title: String, delegateAction: @escaping (() -> Void)) {
-        let filterButton = FilterButton.loadFromNib()
-        filterButtons.append(filterButton)
-        filterButton.configureTitle(title)
-        filterButtonsStackView.addArrangedSubview(filterButton)
-        filterButton.addAction(delegateAction)
+    private func configureFilterButton(
+        title: String,
+        stateHandler: @escaping ((FilterButton.State, UIView) -> Void)) {
+            let filterButton = FilterButton.loadFromNib()
+            filterButtons.append(filterButton)
+            filterButton.configureTitle(title)
+            filterButtonsStackView.addArrangedSubview(filterButton)
+            filterButton.configureStateHandler(stateHandler)
     }
     
     private func configureTapGestureRecognizer() {

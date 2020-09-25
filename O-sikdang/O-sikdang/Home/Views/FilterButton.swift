@@ -22,7 +22,7 @@ final class FilterButton: UIView {
     @IBOutlet weak var imageView: UIImageView!
     
     private var tapGestureRecognizer: UITapGestureRecognizer!
-    private var action: (() -> Void)?
+    private var stateHandler: ((_ currentState: State, _ at: UIView) -> Void)?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -42,14 +42,18 @@ final class FilterButton: UIView {
         titleLabel.text = title
     }
     
-    func addAction(_ action: @escaping (() -> Void)) {
-        self.action = action
+    func configureStateHandler(_ stateHandler: @escaping ((State, UIView) -> Void)) {
+        self.stateHandler = stateHandler
     }
 }
 
 // MARK: - State
 
 extension FilterButton {
+    func reset() {
+        state = .folded
+    }
+    
     private func flipState() {
         state = state == .folded ? .unfolded : .folded
     }
@@ -82,7 +86,7 @@ extension FilterButton {
     }
     
     @objc private func filterButtonDidTap() {
-        action?()
+        stateHandler?(state, self)
         flipState()
     }
 }
