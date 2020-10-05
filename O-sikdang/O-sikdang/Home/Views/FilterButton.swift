@@ -1,5 +1,9 @@
 import UIKit
 
+protocol FilterButtonDelegate: class {
+    func didTapFilterButton(_ filterButton: FilterButton)
+}
+
 final class FilterButton: UIView {
     
     enum State {
@@ -18,11 +22,16 @@ final class FilterButton: UIView {
         }
     }
     
+    weak var delegate: FilterButtonDelegate?
+    
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     
+    var title: String {
+        return titleLabel.text!
+    }
+    
     private var tapGestureRecognizer: UITapGestureRecognizer!
-    private var stateHandler: ((_ currentState: State, _ at: UIView) -> Void)?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -41,21 +50,17 @@ final class FilterButton: UIView {
     func configureTitle(_ title: String) {
         titleLabel.text = title
     }
-    
-    func configureStateHandler(_ stateHandler: @escaping ((State, UIView) -> Void)) {
-        self.stateHandler = stateHandler
-    }
 }
 
 // MARK: - State
 
 extension FilterButton {
-    func reset() {
+    func fold() {
         state = .folded
     }
     
-    private func flipState() {
-        state = state == .folded ? .unfolded : .folded
+    func unfold() {
+        state = .unfolded
     }
     
     private func folded() {
@@ -86,7 +91,6 @@ extension FilterButton {
     }
     
     @objc private func filterButtonDidTap() {
-        stateHandler?(state, self)
-        flipState()
+        delegate?.didTapFilterButton(self)
     }
 }

@@ -14,6 +14,11 @@ typealias HomeTopViewDelegate = currentLocationDelegate & filterButtonActionsDel
 
 final class HomeTopView: UIView {
     
+    private enum FilterTitle {
+        static let Category = "카테고리"
+        static let Distance = "거리"
+    }
+    
     @IBOutlet weak var currentLocationStackView: UIStackView!
     @IBOutlet weak var currentLocationLabel: UILabel!
     @IBOutlet weak var filterButtonsStackView: UIStackView!
@@ -41,30 +46,37 @@ final class HomeTopView: UIView {
     }
 }
 
-extension HomeTopView {
-    private func configureFilterButtons() {
-        configureFilterButtonHandler(title: "카테고리") { [weak self] (state, filterButton) in
-            self?.filterButtons
-                .filter { $0 != filterButton }
-                .forEach { $0.reset() }
-            self?.delegate?.didTapCategoryFilterButton(state)
+extension HomeTopView: FilterButtonDelegate {
+    func didTapFilterButton(_ filterButton: FilterButton) {
+        let count = filterButtons.filter({$0.state != .folded}).count
+        guard count == 0 else {
+            filterButtons.forEach { $0.fold() }
+            return
         }
-        configureFilterButtonHandler(title: "거리") { [weak self] (state, filterButton) in
-            self?.filterButtons
-                .filter { $0 != filterButton }
-                .forEach { $0.reset() }
-            self?.delegate?.didTapDistanceFilterButton(state)
+        filterButton.unfold()
+        switch filterButton.title {
+        case FilterTitle.Category:
+            delegate?.didTapCategoryFilterButton(.unfolded)
+        case FilterTitle.Distance:
+            delegate?.didTapDistanceFilterButton(.unfolded)
+        default:
+            break
         }
     }
+}
+
+extension HomeTopView {
+    private func configureFilterButtons() {
+        configureFilterButton(title: FilterTitle.Category)
+        configureFilterButton(title: FilterTitle.Distance)
+    }
     
-    private func configureFilterButtonHandler(
-        title: String,
-        stateHandler: @escaping ((FilterButton.State, UIView) -> Void)) {
+    private func configureFilterButton(title: String) {
             let filterButton = FilterButton.loadFromNib()
             filterButtons.append(filterButton)
+            filterButton.delegate = self
             filterButton.configureTitle(title)
             filterButtonsStackView.addArrangedSubview(filterButton)
-            filterButton.configureStateHandler(stateHandler)
     }
     
     private func configureTapGestureRecognizer() {
