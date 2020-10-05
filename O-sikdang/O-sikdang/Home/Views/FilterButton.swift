@@ -64,15 +64,17 @@ extension FilterButton {
     }
     
     private func folded() {
-        guard state == .folded else { return }
-        imageView.image = UIImage(systemName: "chevron.down")
-        backgroundColor = .white
+        UIView.animate(withDuration: 0.3) {
+            self.imageView.image = UIImage(systemName: "chevron.down")
+            self.backgroundColor = .white
+        }
     }
     
     private func unfolded() {
-        guard state == .unfolded else { return }
-        imageView.image = UIImage(systemName: "chevron.up")
-        backgroundColor = UIColor(white: 0.8, alpha: 1)
+        UIView.animate(withDuration: 0.3) {
+            self.imageView.image = UIImage(systemName: "chevron.up")
+            self.backgroundColor = UIColor(white: 0.8, alpha: 1)
+        }
     }
 }
 
