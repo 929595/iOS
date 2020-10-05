@@ -43,13 +43,13 @@ final class HomeTopView: UIView {
 
 extension HomeTopView {
     private func configureFilterButtons() {
-        configureFilterButton(title: "카테고리") { [weak self] (state, filterButton) in
+        configureFilterButtonHandler(title: "카테고리") { [weak self] (state, filterButton) in
             self?.filterButtons
                 .filter { $0 != filterButton }
                 .forEach { $0.reset() }
             self?.delegate?.didTapCategoryFilterButton(state)
         }
-        configureFilterButton(title: "거리") { [weak self] (state, filterButton) in
+        configureFilterButtonHandler(title: "거리") { [weak self] (state, filterButton) in
             self?.filterButtons
                 .filter { $0 != filterButton }
                 .forEach { $0.reset() }
@@ -57,7 +57,7 @@ extension HomeTopView {
         }
     }
     
-    private func configureFilterButton(
+    private func configureFilterButtonHandler(
         title: String,
         stateHandler: @escaping ((FilterButton.State, UIView) -> Void)) {
             let filterButton = FilterButton.loadFromNib()
