@@ -47,6 +47,14 @@ extension HomeViewController: CLLocationManagerDelegate {
 // MARK: - HomeTopViewDelegate
 
 extension HomeViewController: HomeTopViewDelegate {
+    func didTapDistanceFilterButton(_ state: FilterButton.State) {
+        #warning("Distance filter tapped")
+    }
+    
+    func didTapCategoryFilterButton(_ state: FilterButton.State) {
+        #warning("Category filter tapped")
+    }
+    
     func didTapLocation() {
         locationManager.requestLocation()
     }
