@@ -60,6 +60,25 @@ extension HomeViewController: HomeTopViewDelegate {
     }
 }
 
+// MARK: - TableViewDelegates
+
+extension HomeViewController: UITableViewDataSource {
+    func tableView(
+        _ tableView: UITableView,
+        numberOfRowsInSection section: Int) -> Int {
+        return 4
+    }
+    
+    func tableView(
+        _ tableView: UITableView,
+        cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(
+            withIdentifier: HomeRestaurantCell.identifier,
+            for: indexPath)
+        return cell
+    }
+}
+
 // MARK: - Configuration
 
 extension HomeViewController {
@@ -68,6 +87,15 @@ extension HomeViewController {
         configureSubviews()
         configureViewLayouts()
         configureDelegates()
+        configureTableView()
+    }
+    
+    private func configureTableView() {
+        let nib = UINib(nibName: HomeRestaurantCell.identifier, bundle: nil)
+        restaurantsTableView.register(
+            nib,
+            forCellReuseIdentifier: HomeRestaurantCell.identifier)
+        restaurantsTableView.dataSource = self
     }
     
     private func configureDelegates() {
