@@ -6,8 +6,8 @@ final class HomeViewController: UIViewController {
 
     private var homeTopView: HomeTopView!
     private var todayChatBubbleView: HomeTodayChatBubbleView!
-    @IBOutlet weak var restaurantsTableView: UITableView!
-    @IBOutlet weak var refreshButton: UIButton!
+    private var restaurantsTableView = UITableView()
+    private var refreshButton: UIButton!
     
     let locationManager = CLLocationManager()
     
@@ -15,6 +15,7 @@ final class HomeViewController: UIViewController {
         static let topViewHeight: CGFloat = 88.0
         static let chatBubbleViewHeight: CGFloat = 120.0
         static let refreshButtonTopMargin: CGFloat = 12.0
+        static let refreshButtonFontSize: CGFloat = 14.0
     }
     
     override func viewDidLoad() {
@@ -60,6 +61,25 @@ extension HomeViewController: HomeTopViewDelegate {
     }
 }
 
+// MARK: - TableViewDelegates
+
+extension HomeViewController: UITableViewDataSource {
+    func tableView(
+        _ tableView: UITableView,
+        numberOfRowsInSection section: Int) -> Int {
+        return 4
+    }
+    
+    func tableView(
+        _ tableView: UITableView,
+        cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(
+            withIdentifier: HomeRestaurantCell.identifier,
+            for: indexPath)
+        return cell
+    }
+}
+
 // MARK: - Configuration
 
 extension HomeViewController {
@@ -68,6 +88,21 @@ extension HomeViewController {
         configureSubviews()
         configureViewLayouts()
         configureDelegates()
+        configureTableView()
+    }
+    
+    private func configureTableView() {
+        let nib = UINib(nibName: HomeRestaurantCell.identifier, bundle: nil)
+        restaurantsTableView.allowsSelection = false
+        restaurantsTableView.isScrollEnabled = false
+        restaurantsTableView.register(
+            nib,
+            forCellReuseIdentifier: HomeRestaurantCell.identifier)
+        restaurantsTableView.dataSource = self
+        self.view.layoutIfNeeded()
+        restaurantsTableView.snp.makeConstraints { (make) in
+            make.height.equalTo(restaurantsTableView.contentSize.height)
+        }
     }
     
     private func configureDelegates() {
@@ -82,18 +117,12 @@ extension HomeViewController {
             make.top.equalTo(view.safeAreaLayoutGuide.snp.top)
             make.height.equalTo(Metric.topViewHeight)
         }
-        todayChatBubbleView.snp.makeConstraints { (make) -> Void in
-            make.leading.equalTo(view.snp.leading)
-            make.trailing.equalTo(view.snp.trailing)
-            make.top.equalTo(homeTopView.snp.bottom)
-            make.height.equalTo(Metric.chatBubbleViewHeight)
-        }
         restaurantsTableView.snp.makeConstraints { (make) -> Void in
             restaurantsTableView.backgroundColor = .blue
             make.leading.equalTo(view.snp.leading)
             make.trailing.equalTo(view.snp.trailing)
-            make.top.equalTo(todayChatBubbleView.snp.bottom)
-            make.height.equalTo(360)
+            make.top.equalTo(homeTopView.snp.bottom)
+            make.height.equalTo(view.frame.height)
         }
         refreshButton.snp.updateConstraints { (make) -> Void in
             make.top.equalTo(restaurantsTableView.snp.bottom).offset(Metric.refreshButtonTopMargin)
@@ -101,9 +130,19 @@ extension HomeViewController {
         }
     }
     
+    private func configureRefreshButton() {
+        refreshButton = UIButton(type: .system)
+        refreshButton.setTitle("다시 추천하기", for: .normal)
+        refreshButton.setTitleColor(.black, for: .normal)
+        refreshButton.titleLabel?.font = .systemFont(ofSize: 14)
+    }
+    
     private func configureSubviews() {
+        configureRefreshButton()
         view.addSubview(homeTopView)
         view.addSubview(todayChatBubbleView)
+        view.addSubview(restaurantsTableView)
+        view.addSubview(refreshButton)
     }
     
     private func configureViews() {

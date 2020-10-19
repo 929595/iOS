@@ -17,6 +17,8 @@
 		38EAB1BF251C980300636B34 /* FilterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38EAB1BE251C980300636B34 /* FilterButton.swift */; };
 		38EAB1C1251C987200636B34 /* FilterButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38EAB1C0251C987200636B34 /* FilterButton.xib */; };
 		38EAB1C3251CBB9F00636B34 /* UIView+Layer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38EAB1C2251CBB9F00636B34 /* UIView+Layer.swift */; };
+		38EE1A86252C5679008DA0C9 /* HomeRestaurantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38EE1A84252C5679008DA0C9 /* HomeRestaurantCell.swift */; };
+		38EE1A87252C5679008DA0C9 /* HomeRestaurantCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38EE1A85252C5679008DA0C9 /* HomeRestaurantCell.xib */; };
 		38F824052509C8AB00266467 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F824042509C8AB00266467 /* AppDelegate.swift */; };
 		38F824072509C8AB00266467 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F824062509C8AB00266467 /* SceneDelegate.swift */; };
 		38F824092509C8AB00266467 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F824082509C8AB00266467 /* HomeViewController.swift */; };
@@ -35,6 +37,8 @@
 		38EAB1BE251C980300636B34 /* FilterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterButton.swift; sourceTree = "<group>"; };
 		38EAB1C0251C987200636B34 /* FilterButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterButton.xib; sourceTree = "<group>"; };
 		38EAB1C2251CBB9F00636B34 /* UIView+Layer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Layer.swift"; sourceTree = "<group>"; };
+		38EE1A84252C5679008DA0C9 /* HomeRestaurantCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRestaurantCell.swift; sourceTree = "<group>"; };
+		38EE1A85252C5679008DA0C9 /* HomeRestaurantCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeRestaurantCell.xib; sourceTree = "<group>"; };
 		38F824012509C8AB00266467 /* O-sikdang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "O-sikdang.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		38F824042509C8AB00266467 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		38F824062509C8AB00266467 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -103,6 +107,8 @@
 				382D474A251B49850055A469 /* HomeTodayChatBubbleView.swift */,
 				38EAB1C0251C987200636B34 /* FilterButton.xib */,
 				38EAB1BE251C980300636B34 /* FilterButton.swift */,
+				38EE1A84252C5679008DA0C9 /* HomeRestaurantCell.swift */,
+				38EE1A85252C5679008DA0C9 /* HomeRestaurantCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -236,6 +242,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				382D4743251B3E3E0055A469 /* .swiftlint.yml in Resources */,
+				38EE1A87252C5679008DA0C9 /* HomeRestaurantCell.xib in Resources */,
 				38EAB1C1251C987200636B34 /* FilterButton.xib in Resources */,
 				382D4749251B49430055A469 /* HomeTodayChatBubbleView.xib in Resources */,
 				38F824112509C8B000266467 /* LaunchScreen.storyboard in Resources */,
@@ -316,6 +323,7 @@
 				382D4747251B3FF40055A469 /* HomeTopView.swift in Sources */,
 				38F824092509C8AB00266467 /* HomeViewController.swift in Sources */,
 				38F824052509C8AB00266467 /* AppDelegate.swift in Sources */,
+				38EE1A86252C5679008DA0C9 /* HomeRestaurantCell.swift in Sources */,
 				38F824072509C8AB00266467 /* SceneDelegate.swift in Sources */,
 				382D474B251B49850055A469 /* HomeTodayChatBubbleView.swift in Sources */,
 				38EAB1C3251CBB9F00636B34 /* UIView+Layer.swift in Sources */,
