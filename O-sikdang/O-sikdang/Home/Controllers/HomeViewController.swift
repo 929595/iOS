@@ -6,6 +6,7 @@ final class HomeViewController: UIViewController {
     
     private var topView: HomeExtendableTopView!
     private var searchButton: SearchButton!
+    private var locationView: CurrentLocationView!
     
     enum Metric {
         static let topViewSideOffset: CGFloat = 4
@@ -17,6 +18,18 @@ final class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configure()
+    }
+}
+
+// MARK: - CurrentLocationViewDelegate
+
+extension HomeViewController: CurrentLocationViewDelegate {
+    func didTapCurrentLocationView() {
+        locationView.changeState(to: .searching)
+        DispatchQueue.main.async {
+            sleep(1)
+            self.locationView.changeState(to: .idle)
+        }
     }
 }
 
@@ -65,11 +78,18 @@ extension HomeViewController {
             make.width.equalTo(SearchButton.Metric.width)
             make.height.equalTo(SearchButton.Metric.height)
         }
+        locationView.snp.makeConstraints { (make) in
+            make.centerX.equalTo(topView.snp.centerX)
+            make.bottom.equalTo(topView.snp.bottom).offset(-32)
+            make.height.equalTo(locationView.stackView.frame.height + 8)
+            make.width.equalTo(locationView.stackView.frame.width + 24)
+        }
     }
     
     private func configureSubViews() {
         view.addSubview(topView)
         view.addSubview(searchButton)
+        view.addSubview(locationView)
     }
     
     private func configureViews() {
@@ -78,6 +98,8 @@ extension HomeViewController {
         topView.delegate = self
         searchButton = SearchButton.loadFromNib()
         searchButton.delegate = self
+        locationView = CurrentLocationView.loadFromNib()
+        locationView.delegate = self
     }
     
     private func configure() {
