@@ -7,17 +7,33 @@ final class HomeViewController: UIViewController {
     private var topView: HomeExtendableTopView!
     private var searchButton: SearchButton!
     private var locationView: CurrentLocationView!
+    private var filterButtonsView: FilterButtonsView!
     
     enum Metric {
         static let topViewSideOffset: CGFloat = 4
         static let topViewNormalHeight: CGFloat = 160
         static let topViewExtendedHeightRatio: CGFloat = 0.7
         static let searchButtonTopMargin: CGFloat = 24
+        static let filterButtonsViewBottmMargin: CGFloat = 20
+        static let filterButtonsViewSideMargin: CGFloat = 24
+        static let locationViewBottomMargin: CGFloat = 24.0
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configure()
+    }
+}
+
+// MARK: - FilterButtonsViewDelegate
+
+extension HomeViewController: FilterButtonDelegate {
+    func didTapCategoryButton() {
+        #warning("category filter button action")
+    }
+    
+    func didTapDistanceButton() {
+        #warning("distance filter button action")
     }
 }
 
@@ -78,18 +94,26 @@ extension HomeViewController {
             make.width.equalTo(SearchButton.Metric.width)
             make.height.equalTo(SearchButton.Metric.height)
         }
+        filterButtonsView.snp.makeConstraints { (make) in
+            make.centerX.equalTo(topView.snp.centerX)
+            make.bottom.equalTo(topView.snp.bottom).offset(-Metric.filterButtonsViewBottmMargin)
+            make.height.equalTo(filterButtonsView.stackView.frame.height)
+            make.width.equalTo(view.frame.width - Metric.filterButtonsViewSideMargin * 2)
+        }
         locationView.snp.makeConstraints { (make) in
             make.centerX.equalTo(topView.snp.centerX)
-            make.bottom.equalTo(topView.snp.bottom).offset(-32)
+            make.bottom.equalTo(filterButtonsView.snp.top).offset(-Metric.locationViewBottomMargin)
             make.height.equalTo(locationView.stackView.frame.height + 8)
             make.width.equalTo(locationView.stackView.frame.width + 24)
         }
+        
     }
     
     private func configureSubViews() {
         view.addSubview(topView)
         view.addSubview(searchButton)
         view.addSubview(locationView)
+        view.addSubview(filterButtonsView)
     }
     
     private func configureViews() {
@@ -100,6 +124,8 @@ extension HomeViewController {
         searchButton.delegate = self
         locationView = CurrentLocationView.loadFromNib()
         locationView.delegate = self
+        filterButtonsView = FilterButtonsView.loadFromNib()
+        filterButtonsView.delegate = self
     }
     
     private func configure() {

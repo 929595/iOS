@@ -19,6 +19,8 @@
 		38DCAF8825480F5B00C627D5 /* CurrentLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DCAF8725480F5B00C627D5 /* CurrentLocationView.swift */; };
 		38DCAF8B25480F6A00C627D5 /* CurrentLocationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38DCAF8A25480F6A00C627D5 /* CurrentLocationView.xib */; };
 		38EAB1C3251CBB9F00636B34 /* UIView+Layer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38EAB1C2251CBB9F00636B34 /* UIView+Layer.swift */; };
+		38F622732548487200A7BF26 /* FilterButtonsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38F622722548487200A7BF26 /* FilterButtonsView.xib */; };
+		38F622762548487F00A7BF26 /* FilterButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F622752548487F00A7BF26 /* FilterButtonsView.swift */; };
 		38F824052509C8AB00266467 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F824042509C8AB00266467 /* AppDelegate.swift */; };
 		38F824072509C8AB00266467 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F824062509C8AB00266467 /* SceneDelegate.swift */; };
 		38F824092509C8AB00266467 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F824082509C8AB00266467 /* HomeViewController.swift */; };
@@ -39,6 +41,8 @@
 		38DCAF8725480F5B00C627D5 /* CurrentLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentLocationView.swift; sourceTree = "<group>"; };
 		38DCAF8A25480F6A00C627D5 /* CurrentLocationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurrentLocationView.xib; sourceTree = "<group>"; };
 		38EAB1C2251CBB9F00636B34 /* UIView+Layer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Layer.swift"; sourceTree = "<group>"; };
+		38F622722548487200A7BF26 /* FilterButtonsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterButtonsView.xib; sourceTree = "<group>"; };
+		38F622752548487F00A7BF26 /* FilterButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterButtonsView.swift; sourceTree = "<group>"; };
 		38F824012509C8AB00266467 /* O-sikdang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "O-sikdang.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		38F824042509C8AB00266467 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		38F824062509C8AB00266467 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -141,6 +145,8 @@
 				389B3428253DC4CF00B3145D /* SearchButton.swift */,
 				38DCAF8A25480F6A00C627D5 /* CurrentLocationView.xib */,
 				38DCAF8725480F5B00C627D5 /* CurrentLocationView.swift */,
+				38F622722548487200A7BF26 /* FilterButtonsView.xib */,
+				38F622752548487F00A7BF26 /* FilterButtonsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -241,6 +247,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38F622732548487200A7BF26 /* FilterButtonsView.xib in Resources */,
 				382D4743251B3E3E0055A469 /* .swiftlint.yml in Resources */,
 				389B3421253D9F1A00B3145D /* HomeExtendableTopView.xib in Resources */,
 				38F824112509C8B000266467 /* LaunchScreen.storyboard in Resources */,
@@ -318,6 +325,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38F622762548487F00A7BF26 /* FilterButtonsView.swift in Sources */,
 				389B3429253DC4CF00B3145D /* SearchButton.swift in Sources */,
 				389B341D253D9F0B00B3145D /* HomeExtendableTopView.swift in Sources */,
 				380F7938253EDFCA003DC4E4 /* UIView+Animation.swift in Sources */,
