@@ -15,11 +15,6 @@ final class SearchButton: UIView {
         case complete
     }
     
-    enum Metric {
-        static let width: CGFloat = 88.0
-        static let height: CGFloat = 88.0
-    }
-    
     private var state: State = .idle {
         didSet {
             switch state {
@@ -80,7 +75,6 @@ extension SearchButton {
     }
     
     private func configureViews() {
-        round(cornerRadius: Metric.width / 2)
         layer.shadowColor = UIColor.lightGray.cgColor
         layer.shadowOpacity = 0.3
         layer.shadowOffset = .init(width: 0, height: 0)

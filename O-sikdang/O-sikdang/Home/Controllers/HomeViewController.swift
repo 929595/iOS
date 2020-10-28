@@ -12,11 +12,11 @@ final class HomeViewController: UIViewController {
     enum Metric {
         static let topViewSideOffset: CGFloat = 4
         static let topViewNormalHeight: CGFloat = 160
-        static let topViewExtendedHeightRatio: CGFloat = 0.7
-        static let searchButtonTopMargin: CGFloat = 24
-        static let filterButtonsViewBottmMargin: CGFloat = 20
-        static let filterButtonsViewSideMargin: CGFloat = 24
-        static let locationViewBottomMargin: CGFloat = 24.0
+        static let topViewExtendedHeightRatio: CGFloat = 0.3
+        static let searchButtonTopMargin: CGFloat = 48
+        static let filterButtonsViewBottmMargin: CGFloat = 24.0
+        static let filterButtonsViewSideMargin: CGFloat = 40.0
+        static let locationViewBottomMargin: CGFloat = 20.0
     }
     
     override func viewDidLoad() {
@@ -41,10 +41,10 @@ extension HomeViewController: FilterButtonDelegate {
 
 extension HomeViewController: CurrentLocationViewDelegate {
     func didTapCurrentLocationView() {
-        locationView.changeState(to: .searching)
-        DispatchQueue.main.async {
-            sleep(1)
-            self.locationView.changeState(to: .idle)
+        self.locationView.changeState(to: .searching)
+        let time = DispatchTime.now() + .seconds(1)
+        DispatchQueue.main.asyncAfter(deadline: time) {
+            self.self.locationView.changeState(to: .idle)
         }
     }
 }
@@ -65,8 +65,6 @@ extension HomeViewController: HomeExtendableTopViewDelegate {
     func didChangeState(to state: HomeExtendableTopView.State) {
         if state == .complete {
             configureTopViewConstraints(height: Metric.topViewNormalHeight)
-        } else if state == .idle {
-            configureTopViewConstraints(height: view.frame.height * Metric.topViewExtendedHeightRatio)
         }
         UIView.animateWithDamping(withDuration: 0.7) {
             self.view.layoutIfNeeded()
@@ -87,13 +85,19 @@ extension HomeViewController {
     }
     
     private func configureConstraints() {
-        configureTopViewConstraints(height: view.frame.height * Metric.topViewExtendedHeightRatio)
-        searchButton.snp.makeConstraints { (make) in
-            make.top.equalTo(topView.snp.bottom).offset(Metric.searchButtonTopMargin)
-            make.centerX.equalTo(topView.snp.centerX)
-            make.width.equalTo(SearchButton.Metric.width)
-            make.height.equalTo(SearchButton.Metric.height)
+        topView.snp.makeConstraints { (make) in
+            make.top.equalTo(view.snp.top)
+            make.leading.equalToSuperview().offset(-Metric.topViewSideOffset)
+            make.trailing.equalToSuperview().offset(Metric.topViewSideOffset)
+            make.bottom.equalTo(searchButton.snp.top).offset(-48)
         }
+        searchButton.snp.makeConstraints { (make) in
+            make.centerX.equalTo(topView.snp.centerX)
+            make.centerY.equalTo(view.snp.centerY).offset(48)
+            make.width.equalTo(view.frame.width * 0.6)
+            make.height.equalTo(view.frame.width * 0.6)
+        }
+        
         filterButtonsView.snp.makeConstraints { (make) in
             make.centerX.equalTo(topView.snp.centerX)
             make.bottom.equalTo(topView.snp.bottom).offset(-Metric.filterButtonsViewBottmMargin)
@@ -106,7 +110,8 @@ extension HomeViewController {
             make.height.equalTo(locationView.stackView.frame.height + 8)
             make.width.equalTo(locationView.stackView.frame.width + 24)
         }
-        
+        view.layoutIfNeeded()
+        searchButton.round(cornerRadius: searchButton.frame.width / 2)
     }
     
     private func configureSubViews() {

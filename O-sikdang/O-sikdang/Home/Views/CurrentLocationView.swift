@@ -53,11 +53,11 @@ final class CurrentLocationView: UIView {
 
 extension CurrentLocationView {
     private func animateToIdle() {
-        UIView.animateWithDamping(withDuration: 0.5) {
+        self.stackView.isHidden = false
+        UIView.animateWithDamping(withDuration: 0.3) {
             self.stackView.alpha = 1.0
             self.activityIndicatorView.alpha = 0.0
         } completion: { _ in
-            self.stackView.isHidden = false
             self.activityIndicatorView.stopAnimating()
             self.activityIndicatorView.isHidden = true
         }
@@ -65,7 +65,7 @@ extension CurrentLocationView {
     
     private func animateToSearching() {
         activityIndicatorView.isHidden = false
-        UIView.animateWithDamping(withDuration: 0.5) {
+        UIView.animateWithDamping(withDuration: 0.3) {
             self.stackView.alpha = 0.0
             self.activityIndicatorView.alpha = 1.0
             self.activityIndicatorView.startAnimating()
