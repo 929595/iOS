@@ -8,17 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		1A1919614633BCE7B10347A8 /* Pods_O_sikdang.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDED5464636362DF3BA5515B /* Pods_O_sikdang.framework */; };
-		382D473B2519FC380055A469 /* HomeTopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 382D473A2519FC380055A469 /* HomeTopView.xib */; };
+		380F7933253ED8F0003DC4E4 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380F7932253ED8F0003DC4E4 /* UIColor.swift */; };
+		380F7938253EDFCA003DC4E4 /* UIView+Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380F7937253EDFCA003DC4E4 /* UIView+Animation.swift */; };
 		382D4743251B3E3E0055A469 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 382D4742251B3E3E0055A469 /* .swiftlint.yml */; };
 		382D4745251B3FBC0055A469 /* UIView+Nib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382D4744251B3FBC0055A469 /* UIView+Nib.swift */; };
-		382D4747251B3FF40055A469 /* HomeTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382D4746251B3FF40055A469 /* HomeTopView.swift */; };
-		382D4749251B49430055A469 /* HomeTodayChatBubbleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 382D4748251B49430055A469 /* HomeTodayChatBubbleView.xib */; };
-		382D474B251B49850055A469 /* HomeTodayChatBubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382D474A251B49850055A469 /* HomeTodayChatBubbleView.swift */; };
-		38EAB1BF251C980300636B34 /* FilterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38EAB1BE251C980300636B34 /* FilterButton.swift */; };
-		38EAB1C1251C987200636B34 /* FilterButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38EAB1C0251C987200636B34 /* FilterButton.xib */; };
+		389B341D253D9F0B00B3145D /* HomeExtendableTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389B341C253D9F0B00B3145D /* HomeExtendableTopView.swift */; };
+		389B3421253D9F1A00B3145D /* HomeExtendableTopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 389B3420253D9F1A00B3145D /* HomeExtendableTopView.xib */; };
+		389B3426253DC49500B3145D /* SearchButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 389B3425253DC49500B3145D /* SearchButton.xib */; };
+		389B3429253DC4CF00B3145D /* SearchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389B3428253DC4CF00B3145D /* SearchButton.swift */; };
+		38DCAF8825480F5B00C627D5 /* CurrentLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DCAF8725480F5B00C627D5 /* CurrentLocationView.swift */; };
+		38DCAF8B25480F6A00C627D5 /* CurrentLocationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38DCAF8A25480F6A00C627D5 /* CurrentLocationView.xib */; };
 		38EAB1C3251CBB9F00636B34 /* UIView+Layer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38EAB1C2251CBB9F00636B34 /* UIView+Layer.swift */; };
-		38EE1A86252C5679008DA0C9 /* HomeRestaurantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38EE1A84252C5679008DA0C9 /* HomeRestaurantCell.swift */; };
-		38EE1A87252C5679008DA0C9 /* HomeRestaurantCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38EE1A85252C5679008DA0C9 /* HomeRestaurantCell.xib */; };
+		38F622732548487200A7BF26 /* FilterButtonsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38F622722548487200A7BF26 /* FilterButtonsView.xib */; };
+		38F622762548487F00A7BF26 /* FilterButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F622752548487F00A7BF26 /* FilterButtonsView.swift */; };
 		38F824052509C8AB00266467 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F824042509C8AB00266467 /* AppDelegate.swift */; };
 		38F824072509C8AB00266467 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F824062509C8AB00266467 /* SceneDelegate.swift */; };
 		38F824092509C8AB00266467 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F824082509C8AB00266467 /* HomeViewController.swift */; };
@@ -28,17 +30,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		382D473A2519FC380055A469 /* HomeTopView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTopView.xib; sourceTree = "<group>"; };
+		380F7932253ED8F0003DC4E4 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		380F7937253EDFCA003DC4E4 /* UIView+Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Animation.swift"; sourceTree = "<group>"; };
 		382D4742251B3E3E0055A469 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		382D4744251B3FBC0055A469 /* UIView+Nib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Nib.swift"; sourceTree = "<group>"; };
-		382D4746251B3FF40055A469 /* HomeTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTopView.swift; sourceTree = "<group>"; };
-		382D4748251B49430055A469 /* HomeTodayChatBubbleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTodayChatBubbleView.xib; sourceTree = "<group>"; };
-		382D474A251B49850055A469 /* HomeTodayChatBubbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTodayChatBubbleView.swift; sourceTree = "<group>"; };
-		38EAB1BE251C980300636B34 /* FilterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterButton.swift; sourceTree = "<group>"; };
-		38EAB1C0251C987200636B34 /* FilterButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterButton.xib; sourceTree = "<group>"; };
+		389B341C253D9F0B00B3145D /* HomeExtendableTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeExtendableTopView.swift; sourceTree = "<group>"; };
+		389B3420253D9F1A00B3145D /* HomeExtendableTopView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeExtendableTopView.xib; sourceTree = "<group>"; };
+		389B3425253DC49500B3145D /* SearchButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchButton.xib; sourceTree = "<group>"; };
+		389B3428253DC4CF00B3145D /* SearchButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchButton.swift; sourceTree = "<group>"; };
+		38DCAF8725480F5B00C627D5 /* CurrentLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentLocationView.swift; sourceTree = "<group>"; };
+		38DCAF8A25480F6A00C627D5 /* CurrentLocationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurrentLocationView.xib; sourceTree = "<group>"; };
 		38EAB1C2251CBB9F00636B34 /* UIView+Layer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Layer.swift"; sourceTree = "<group>"; };
-		38EE1A84252C5679008DA0C9 /* HomeRestaurantCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRestaurantCell.swift; sourceTree = "<group>"; };
-		38EE1A85252C5679008DA0C9 /* HomeRestaurantCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeRestaurantCell.xib; sourceTree = "<group>"; };
+		38F622722548487200A7BF26 /* FilterButtonsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterButtonsView.xib; sourceTree = "<group>"; };
+		38F622752548487F00A7BF26 /* FilterButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterButtonsView.swift; sourceTree = "<group>"; };
 		38F824012509C8AB00266467 /* O-sikdang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "O-sikdang.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		38F824042509C8AB00266467 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		38F824062509C8AB00266467 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,7 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				382D47382519FA560055A469 /* Controllers */,
-				382D47392519FA5E0055A469 /* Views */,
+				389B341B253D9EC500B3145D /* Views */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -98,25 +102,11 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		382D47392519FA5E0055A469 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				382D473A2519FC380055A469 /* HomeTopView.xib */,
-				382D4746251B3FF40055A469 /* HomeTopView.swift */,
-				382D4748251B49430055A469 /* HomeTodayChatBubbleView.xib */,
-				382D474A251B49850055A469 /* HomeTodayChatBubbleView.swift */,
-				38EAB1C0251C987200636B34 /* FilterButton.xib */,
-				38EAB1BE251C980300636B34 /* FilterButton.swift */,
-				38EE1A84252C5679008DA0C9 /* HomeRestaurantCell.swift */,
-				38EE1A85252C5679008DA0C9 /* HomeRestaurantCell.xib */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		382D473C2519FD4A0055A469 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				382D473F251B3D3E0055A469 /* VIews */,
+				380F7932253ED8F0003DC4E4 /* UIColor.swift */,
+				382D473F251B3D3E0055A469 /* Views */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -136,13 +126,29 @@
 			path = "View+XIB";
 			sourceTree = "<group>";
 		};
-		382D473F251B3D3E0055A469 /* VIews */ = {
+		382D473F251B3D3E0055A469 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				382D4744251B3FBC0055A469 /* UIView+Nib.swift */,
 				38EAB1C2251CBB9F00636B34 /* UIView+Layer.swift */,
+				380F7937253EDFCA003DC4E4 /* UIView+Animation.swift */,
 			);
-			path = VIews;
+			path = Views;
+			sourceTree = "<group>";
+		};
+		389B341B253D9EC500B3145D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				389B3420253D9F1A00B3145D /* HomeExtendableTopView.xib */,
+				389B341C253D9F0B00B3145D /* HomeExtendableTopView.swift */,
+				389B3425253DC49500B3145D /* SearchButton.xib */,
+				389B3428253DC4CF00B3145D /* SearchButton.swift */,
+				38DCAF8A25480F6A00C627D5 /* CurrentLocationView.xib */,
+				38DCAF8725480F5B00C627D5 /* CurrentLocationView.swift */,
+				38F622722548487200A7BF26 /* FilterButtonsView.xib */,
+				38F622752548487F00A7BF26 /* FilterButtonsView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		38F823F82509C8AB00266467 = {
@@ -241,14 +247,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38F622732548487200A7BF26 /* FilterButtonsView.xib in Resources */,
 				382D4743251B3E3E0055A469 /* .swiftlint.yml in Resources */,
-				38EE1A87252C5679008DA0C9 /* HomeRestaurantCell.xib in Resources */,
-				38EAB1C1251C987200636B34 /* FilterButton.xib in Resources */,
-				382D4749251B49430055A469 /* HomeTodayChatBubbleView.xib in Resources */,
+				389B3421253D9F1A00B3145D /* HomeExtendableTopView.xib in Resources */,
 				38F824112509C8B000266467 /* LaunchScreen.storyboard in Resources */,
 				38F8240E2509C8B000266467 /* Assets.xcassets in Resources */,
 				38F8240C2509C8AB00266467 /* Main.storyboard in Resources */,
-				382D473B2519FC380055A469 /* HomeTopView.xib in Resources */,
+				389B3426253DC49500B3145D /* SearchButton.xib in Resources */,
+				38DCAF8B25480F6A00C627D5 /* CurrentLocationView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,15 +325,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38F622762548487F00A7BF26 /* FilterButtonsView.swift in Sources */,
+				389B3429253DC4CF00B3145D /* SearchButton.swift in Sources */,
+				389B341D253D9F0B00B3145D /* HomeExtendableTopView.swift in Sources */,
+				380F7938253EDFCA003DC4E4 /* UIView+Animation.swift in Sources */,
 				382D4745251B3FBC0055A469 /* UIView+Nib.swift in Sources */,
-				382D4747251B3FF40055A469 /* HomeTopView.swift in Sources */,
 				38F824092509C8AB00266467 /* HomeViewController.swift in Sources */,
 				38F824052509C8AB00266467 /* AppDelegate.swift in Sources */,
-				38EE1A86252C5679008DA0C9 /* HomeRestaurantCell.swift in Sources */,
+				380F7933253ED8F0003DC4E4 /* UIColor.swift in Sources */,
 				38F824072509C8AB00266467 /* SceneDelegate.swift in Sources */,
-				382D474B251B49850055A469 /* HomeTodayChatBubbleView.swift in Sources */,
 				38EAB1C3251CBB9F00636B34 /* UIView+Layer.swift in Sources */,
-				38EAB1BF251C980300636B34 /* FilterButton.swift in Sources */,
+				38DCAF8825480F5B00C627D5 /* CurrentLocationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
