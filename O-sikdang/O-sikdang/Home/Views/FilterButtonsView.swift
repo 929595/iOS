@@ -62,8 +62,10 @@ extension FilterButtonsView {
     }
     
     private func configureViews() {
-        categoryButton.round(cornerRadius: Metric.cornerRadius)
-        distanceButton.round(cornerRadius: Metric.cornerRadius)
+        categoryButton.round(cornerRadius: categoryButton.frame.height / 2)
+        categoryButton.border(borderColor: .lightGray, borderWidth: 0.3)
+        distanceButton.round(cornerRadius: distanceButton.frame.height / 2)
+        distanceButton.border(borderColor: .lightGray, borderWidth: 0.3)
     }
     
     private func configure() {

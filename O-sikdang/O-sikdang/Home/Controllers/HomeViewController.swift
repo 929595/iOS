@@ -12,11 +12,15 @@ final class HomeViewController: UIViewController {
     enum Metric {
         static let topViewSideOffset: CGFloat = 4
         static let topViewNormalHeight: CGFloat = 160
+        static let topViewBottomPaddingNormal: CGFloat = -100
         static let topViewExtendedHeightRatio: CGFloat = 0.3
         static let searchButtonTopMargin: CGFloat = 48
-        static let filterButtonsViewBottmMargin: CGFloat = 24.0
-        static let filterButtonsViewSideMargin: CGFloat = 40.0
+        static let searchButtonWidthRatio: CGFloat = 0.6
+        static let searchButtonHeightRatio: CGFloat = 0.6 * 0.26
+        static let searchButtonTopPadding: CGFloat = 100
+        static let filterButtonsViewBottomMargin: CGFloat = 24.0
         static let locationViewBottomMargin: CGFloat = 20.0
+        static let locationViewWidthRatio: CGFloat = 0.8
     }
     
     override func viewDidLoad() {
@@ -89,29 +93,31 @@ extension HomeViewController {
             make.top.equalTo(view.snp.top)
             make.leading.equalToSuperview().offset(-Metric.topViewSideOffset)
             make.trailing.equalToSuperview().offset(Metric.topViewSideOffset)
-            make.bottom.equalTo(searchButton.snp.top).offset(-48)
-        }
-        searchButton.snp.makeConstraints { (make) in
-            make.centerX.equalTo(topView.snp.centerX)
-            make.centerY.equalTo(view.snp.centerY).offset(48)
-            make.width.equalTo(view.frame.width * 0.6)
-            make.height.equalTo(view.frame.width * 0.6)
+            make.bottom.equalTo(searchButton.snp.top).offset(Metric.topViewBottomPaddingNormal)
         }
         
-        filterButtonsView.snp.makeConstraints { (make) in
+        searchButton.snp.makeConstraints { (make) in
             make.centerX.equalTo(topView.snp.centerX)
-            make.bottom.equalTo(topView.snp.bottom).offset(-Metric.filterButtonsViewBottmMargin)
-            make.height.equalTo(filterButtonsView.stackView.frame.height)
-            make.width.equalTo(view.frame.width - Metric.filterButtonsViewSideMargin * 2)
+            make.top.equalTo(view.snp.centerY).offset(Metric.searchButtonTopPadding)
+            make.width.equalTo(view.frame.width * Metric.searchButtonWidthRatio)
+            make.height.equalTo(view.frame.width * Metric.searchButtonHeightRatio)
         }
+        
         locationView.snp.makeConstraints { (make) in
             make.centerX.equalTo(topView.snp.centerX)
             make.bottom.equalTo(filterButtonsView.snp.top).offset(-Metric.locationViewBottomMargin)
-            make.height.equalTo(locationView.stackView.frame.height + 8)
-            make.width.equalTo(locationView.stackView.frame.width + 24)
+            make.height.equalTo(locationView.frame.height)
+            make.width.equalTo(view.frame.width * Metric.locationViewWidthRatio)
+        }
+        
+        filterButtonsView.snp.makeConstraints { (make) in
+            make.centerX.equalTo(view.snp.centerX)
+            make.bottom.equalTo(topView.snp.bottom).offset(-Metric.filterButtonsViewBottomMargin)
+            make.height.equalTo(filterButtonsView.stackView.frame.height)
+            make.width.equalTo(locationView.stackView.frame.width)
         }
         view.layoutIfNeeded()
-        searchButton.round(cornerRadius: searchButton.frame.width / 2)
+        searchButton.round(cornerRadius: searchButton.frame.height / 2)
     }
     
     private func configureSubViews() {
