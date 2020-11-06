@@ -15,14 +15,14 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <color key="backgroundColor" name="key.green"/>
+            <color key="backgroundColor" name="backgroundLightGray"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="-120" y="80"/>
         </view>
     </objects>
     <resources>
-        <namedColor name="key.green">
-            <color red="0.20100000500679016" green="0.70999997854232788" blue="0.42800000309944153" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="backgroundLightGray">
+            <color red="0.94099998474121094" green="0.95300000905990601" blue="0.96100002527236938" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
     </resources>
 </document>

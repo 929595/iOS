@@ -108,8 +108,8 @@ extension HomeViewController {
         locationView.snp.makeConstraints { (make) in
             make.centerX.equalTo(topView.snp.centerX)
             make.bottom.equalTo(filterButtonsView.snp.top).offset(-Metric.locationViewBottomMargin)
-            make.height.equalTo(locationView.stackView.frame.height + 8)
-            make.width.equalTo(locationView.stackView.frame.width + 24)
+            make.height.equalTo(locationView.frame.height)
+            make.width.equalTo(view.frame.width * 0.8)
         }
         view.layoutIfNeeded()
         searchButton.round(cornerRadius: searchButton.frame.height / 2)

@@ -12,6 +12,8 @@ final class CurrentLocationView: UIView {
     }
 
     @IBOutlet weak var stackView: UIStackView!
+    @IBOutlet weak var greetingLabel: UILabel!
+    @IBOutlet weak var refreshButton: UIImageView!
     @IBOutlet weak var currentLocationLabel: UILabel!
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     private var gestureRecognizer: UITapGestureRecognizer!
@@ -82,7 +84,7 @@ extension CurrentLocationView {
         gestureRecognizer = UITapGestureRecognizer(
             target: self,
             action: #selector(didTapCurrentLocationView))
-        addGestureRecognizer(gestureRecognizer)
+        stackView.addGestureRecognizer(gestureRecognizer)
     }
     
     private func configure() {
