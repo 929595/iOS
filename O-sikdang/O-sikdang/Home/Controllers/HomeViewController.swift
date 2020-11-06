@@ -16,7 +16,6 @@ final class HomeViewController: UIViewController {
         static let searchButtonTopMargin: CGFloat = 48
         static let searchButtonWidthRatio: CGFloat = 0.6
         static let filterButtonsViewBottmMargin: CGFloat = 24.0
-        static let filterButtonsViewSideMargin: CGFloat = 40.0
         static let locationViewBottomMargin: CGFloat = 20.0
     }
     
@@ -92,6 +91,7 @@ extension HomeViewController {
             make.trailing.equalToSuperview().offset(Metric.topViewSideOffset)
             make.bottom.equalTo(searchButton.snp.top).offset(-48)
         }
+        
         searchButton.snp.makeConstraints { (make) in
             make.centerX.equalTo(topView.snp.centerX)
             make.centerY.equalTo(view.snp.centerY).offset(48)
@@ -99,17 +99,18 @@ extension HomeViewController {
             make.height.equalTo(view.frame.width * Metric.searchButtonWidthRatio * 0.26)
         }
         
-        filterButtonsView.snp.makeConstraints { (make) in
-            make.centerX.equalTo(topView.snp.centerX)
-            make.bottom.equalTo(topView.snp.bottom).offset(-Metric.filterButtonsViewBottmMargin)
-            make.height.equalTo(filterButtonsView.stackView.frame.height)
-            make.width.equalTo(view.frame.width - Metric.filterButtonsViewSideMargin * 2)
-        }
         locationView.snp.makeConstraints { (make) in
             make.centerX.equalTo(topView.snp.centerX)
             make.bottom.equalTo(filterButtonsView.snp.top).offset(-Metric.locationViewBottomMargin)
             make.height.equalTo(locationView.frame.height)
             make.width.equalTo(view.frame.width * 0.8)
+        }
+        
+        filterButtonsView.snp.makeConstraints { (make) in
+            make.centerX.equalTo(view.snp.centerX)
+            make.bottom.equalTo(topView.snp.bottom).offset(-Metric.filterButtonsViewBottmMargin)
+            make.height.equalTo(filterButtonsView.stackView.frame.height)
+            make.width.equalTo(locationView.stackView.frame.width)
         }
         view.layoutIfNeeded()
         searchButton.round(cornerRadius: searchButton.frame.height / 2)
