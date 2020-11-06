@@ -18,7 +18,7 @@ final class HomeViewController: UIViewController {
         static let searchButtonWidthRatio: CGFloat = 0.6
         static let searchButtonHeightRatio: CGFloat = 0.6 * 0.26
         static let searchButtonTopPadding: CGFloat = 100
-        static let filterButtonsViewBottmMargin: CGFloat = 24.0
+        static let filterButtonsViewBottomMargin: CGFloat = 24.0
         static let locationViewBottomMargin: CGFloat = 20.0
         static let locationViewWidthRatio: CGFloat = 0.8
     }
@@ -112,7 +112,7 @@ extension HomeViewController {
         
         filterButtonsView.snp.makeConstraints { (make) in
             make.centerX.equalTo(view.snp.centerX)
-            make.bottom.equalTo(topView.snp.bottom).offset(-Metric.filterButtonsViewBottmMargin)
+            make.bottom.equalTo(topView.snp.bottom).offset(-Metric.filterButtonsViewBottomMargin)
             make.height.equalTo(filterButtonsView.stackView.frame.height)
             make.width.equalTo(locationView.stackView.frame.width)
         }
