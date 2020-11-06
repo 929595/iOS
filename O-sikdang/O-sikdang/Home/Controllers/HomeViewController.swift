@@ -14,6 +14,7 @@ final class HomeViewController: UIViewController {
         static let topViewNormalHeight: CGFloat = 160
         static let topViewExtendedHeightRatio: CGFloat = 0.3
         static let searchButtonTopMargin: CGFloat = 48
+        static let searchButtonWidthRatio: CGFloat = 0.6
         static let filterButtonsViewBottmMargin: CGFloat = 24.0
         static let filterButtonsViewSideMargin: CGFloat = 40.0
         static let locationViewBottomMargin: CGFloat = 20.0
@@ -94,8 +95,8 @@ extension HomeViewController {
         searchButton.snp.makeConstraints { (make) in
             make.centerX.equalTo(topView.snp.centerX)
             make.centerY.equalTo(view.snp.centerY).offset(48)
-            make.width.equalTo(view.frame.width * 0.6)
-            make.height.equalTo(view.frame.width * 0.6)
+            make.width.equalTo(view.frame.width * Metric.searchButtonWidthRatio)
+            make.height.equalTo(view.frame.width * Metric.searchButtonWidthRatio * 0.26)
         }
         
         filterButtonsView.snp.makeConstraints { (make) in
@@ -111,7 +112,7 @@ extension HomeViewController {
             make.width.equalTo(locationView.stackView.frame.width + 24)
         }
         view.layoutIfNeeded()
-        searchButton.round(cornerRadius: searchButton.frame.width / 2)
+        searchButton.round(cornerRadius: searchButton.frame.height / 2)
     }
     
     private func configureSubViews() {
